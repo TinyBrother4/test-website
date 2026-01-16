@@ -1,64 +1,50 @@
-/* Basic Reset */
+/* Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* Banana background */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #2b2b2b; /* Dark theme */
-  color: #f1f1f1;
-  line-height: 1.6;
-}
-
-/* Header */
-.site-header {
+  font-family: Arial, sans-serif;
+  background: repeating-linear-gradient(
+    45deg,
+    #fff9c4,
+    #fff9c4 40px,
+    #fdd835 40px,
+    #fdd835 80px
+  );
   display: flex;
-  align-items: center;
   justify-content: center;
-  gap: 20px;
-  padding: 20px;
-  background: #3e3a32; /* earthy header */
-  border-bottom: 3px solid #a67c52; /* vintage accent */
+  align-items: center;
+  height: 100vh;
 }
 
-.site-header .logo {
-  width: 80px;   /* adjust size */
-  height: auto;
+/* Links container */
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  width: 80%;
+  max-width: 400px;
+}
+
+/* Link buttons */
+.links a {
   display: block;
-}
-
-.site-header h1 {
-  font-family: 'Cinzel', serif; /* medieval feel */
-  font-size: 2rem;
-  color: #f1c40f; /* golden tone */
-}
-
-/* Sections */
-main {
-  padding: 30px;
-}
-
-section {
-  margin-bottom: 30px;
-  background: #3a352e;
-  padding: 20px;
-  border-radius: 8px;
-}
-
-section h2 {
-  color: #f39c12;
-  margin-bottom: 10px;
-}
-
-section a {
-  color: #3498db;
-  text-decoration: none;
+  padding: 15px 20px;
+  background: #ffeb3b;
+  color: #2b2b2b;
   font-weight: bold;
+  text-decoration: none;
+  font-size: 1.2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: transform 0.2s, background 0.2s;
 }
 
-section a:hover {
-  text-decoration: underline;
+.links a:hover {
+  transform: scale(1.05);
+  background: #fbc02d;
 }
-
