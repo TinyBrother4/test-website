@@ -1,26 +1,33 @@
-const username = "octocat"; // CHANGE THIS to your GitHub username
-const container = document.getElementById("repos");
+// --- Vintage Story Website JS ---
+// Log to console to confirm the site is loaded
+console.log("Vintage Story Website loaded! ✅");
 
-fetch(`https://api.github.com/users/${username}/repos`)
-  .then(res => res.json())
-  .then(data => {
-    data.forEach(repo => {
-      const div = document.createElement("div");
-      div.className = "repo";
+// Wait until the DOM is fully loaded
+document.addEventListener("DOMContentLoaded", () => {
 
-      div.innerHTML = `
-        <h2>${repo.name}</h2>
-        <p>${repo.description || "No description"}</p>
-        <div class="stats">
-          ⭐ ${repo.stargazers_count} |
-          🍴 ${repo.forks_count}
-        </div>
-      `;
-
-      container.appendChild(div);
+  // Example: handle Discord link click
+  const discordLink = document.querySelector('a[href*="discord.gg"]');
+  if (discordLink) {
+    discordLink.addEventListener("click", () => {
+      console.log("Discord link clicked! Redirecting...");
     });
-  })
-  .catch(err => {
-    container.innerHTML = "Failed to load repos 😢";
-    console.error(err);
-  });
+  }
+
+  // Placeholder for future feature: dynamic mod list
+  const modsSection = document.querySelector("section:nth-of-type(1)");
+  if (modsSection) {
+    // Example: dynamically add a mod item
+    const modItem = document.createElement("p");
+    modItem.textContent = "Mod Example: Vintage Enhancer v1.0";
+    modsSection.appendChild(modItem);
+  }
+
+  // Placeholder for future feature: help/data tips
+  const helpSection = document.querySelector("section:nth-of-type(2)");
+  if (helpSection) {
+    const tip = document.createElement("p");
+    tip.textContent = "Tip: Always back up your save files before installing mods!";
+    helpSection.appendChild(tip);
+  }
+
+});
