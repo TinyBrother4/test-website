@@ -1,2 +1,2 @@
-// Temporary JS just to confirm the page loads
-console.log("Blank banana Linktree loaded! 🍌");
+// Logs that the page loaded
+console.log("Vintage Story Linktree loaded! 🍌");
